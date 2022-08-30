@@ -1,0 +1,10 @@
+.toolbar{
+    background-color: rgb(228, 195, 151);
+}
+.toolbar-pages{
+    position: absolute;
+    right: 20px;
+}
+button{
+    margin-right: 10px;
+}

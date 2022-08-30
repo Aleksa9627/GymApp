@@ -1,0 +1,101 @@
+<div class="flex-container">
+
+    <!-- Login part -->
+    <div class="flex-child magenta login">
+        <h1>Login</h1>
+        <!-- Email -->
+        <div class="email">
+            <mat-form-field appearance="fill" [style.width.px]=450>
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <!-- Membership -->
+        <div class="membership">
+            <mat-form-field appearance="fill" [style.width.px]=450>
+                <mat-label>Select which kind of account you are using</mat-label>
+                <mat-select>
+                    <mat-option value="one">Member</mat-option>
+                    <mat-option value="two">Admin</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <!-- Password -->
+        <div class="password">
+            <mat-form-field appearance="fill" [style.width.px]=450>
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+
+
+        <!-- Button -->
+        <div class="button">
+            <button mat-raised-button color="primary">Login</button>
+        </div>
+    </div>
+
+
+    <!-- Register part -->
+    <div class="flex-child green register">
+        <h1>Register</h1>
+        <!-- Firstname -->
+        <div class="firstname">
+            <mat-form-field appearance="fill" [style.width.px]=450 required>
+                <mat-label>Enter your name</mat-label>
+                <input matInput placeholder="Firstname">
+            </mat-form-field>
+        </div>
+
+        <!-- Lastname -->
+        <div class="lastname">
+            <mat-form-field appearance="fill" [style.width.px]=450 required>
+                <mat-label>Enter your lastname</mat-label>
+                <input matInput placeholder="Lastname">
+            </mat-form-field>
+        </div>
+
+        <!-- email -->
+        <div class="email">
+            <mat-form-field appearance="fill" [style.width.px]=450>
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Password -->
+        <div class="password">
+            <mat-form-field appearance="fill" [style.width.px]=450>
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="password">
+            <mat-form-field appearance="fill" [style.width.px]=450>
+                <mat-label>Confirm your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <!-- Button -->
+            <div class="button">
+                <button mat-raised-button color="primary">Register</button>
+            </div>
+        </div>
+    </div>
+
+</div>

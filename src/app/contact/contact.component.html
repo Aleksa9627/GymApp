@@ -1,0 +1,30 @@
+<div class="contact">
+
+    <h1>Contact us</h1>
+    <form class="contact-form">
+        <mat-form-field appearance="fill" [style.width.px]=450>
+            <mat-label>Enter your name</mat-label>
+            <input matInput placeholder="Name">
+            <mat-hint>Name</mat-hint>
+        </mat-form-field>
+
+        <div class="email">
+            <mat-form-field appearance="fill" [style.width.px]=450>
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="message-form">
+            <mat-form-field class="message-full-width" appearance="fill" [style.width.px]=450>
+                <mat-label>Leave a message</mat-label>
+                <textarea matInput placeholder="Message..."></textarea>
+            </mat-form-field>
+        </div>
+        <div class="contact-button">
+            <button mat-raised-button color="primary">Send</button>
+        </div>
+
+    </form>
+</div>

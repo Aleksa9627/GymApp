@@ -1,0 +1,16 @@
+.contact {
+    margin: 5%;
+    padding: 4%;
+    border: solid;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.email .mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.contact-button{
+    position: absolute;
+    left: 39%;
+}
