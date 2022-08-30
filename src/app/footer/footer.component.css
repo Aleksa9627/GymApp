@@ -1,9 +1,16 @@
 .footer{
     background-color: rgb(228, 195, 151);
     text-align: center;
-    height: 90px;
+    height: 220px;
+    /* overflow: scroll; */
 }
 
 p{
     padding: 15px;
+}
+
+#icon{
+    padding-top: 45px;
+    width: 60px;
+    height: 60px;
 }
