@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('fasefs');
+    console.log('testic');
   }
 
 }
