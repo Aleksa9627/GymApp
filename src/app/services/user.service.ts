@@ -11,34 +11,51 @@ export class UserService implements OnInit {
     ngOnInit(): void {
     }
 
-    public loadInitialUsers(): void {
-        this.users.push(new User(0, 'Alex@gmail.com', 'Alex123', 'Alex', 'Allison'));
-        this.users.push(new User(1, 'Nathanial@gmail.com', 'Nathanial123', 'Nathanial', 'Cruz'))
-        this.users.push(new User(2, 'Miah@gmail.com', 'Miah123', 'Miah', 'Werner'))
-        this.users.push(new User(3, 'Cullen@gmail.com', 'Cullen123', 'Cullen', 'Roberts'))
-        this.users.push(new User(4, 'Marilyn@gmail.com', 'Marilyn123', 'Marilyn', 'Delacruz'))
-        this.users.push(new User(5, 'Roy@gmail.com', 'Roy123', 'Roy', 'Peterson'))
-        this.users.push(new User(6, 'Bronson@gmail.com', 'Bronson123', 'Bronson', 'Shields'))
+    public initialize(): void {
+        this.users.push(new User(0, 'Alex@gmail.com', 'Alex123', 'Alex', 'Allison', false));
+        this.users.push(new User(1, 'Nathanial@gmail.com', 'Nathanial123', 'Nathanial', 'Cruz', false));
+        this.users.push(new User(2, 'Miah@gmail.com', 'Miah123', 'Miah', 'Werner', false));
+        this.users.push(new User(3, 'Cullen@gmail.com', 'Cullen123', 'Cullen', 'Roberts', false));
+        this.users.push(new User(4, 'Marilyn@gmail.com', 'Marilyn123', 'Marilyn', 'Delacruz', false));
+        this.users.push(new User(5, 'Roy@gmail.com', 'Roy123', 'Roy', 'Peterson', false));
+        this.users.push(new User(6, 'Bronson@gmail.com', 'Bronson123', 'Bronson', 'Shields', false));
     }
 
-    public getUserByEmail(): void {
-
+    public getByLoginInformation(email: string, password: string): User | null {
+        let user = this.users.find(x => x.email === email && x.password === password);
+        if (user === undefined){
+            return null;
+        }
+        return user;
     }
 
-    public getUserById(): void {
-
+    public getById(id: number): User | null {
+        let user = this.users.find(x => x.id === id);
+        if (user === undefined){
+            return null;
+        }
+        return user;
     }
 
-    public getAll(): void {
-
+    public getAll(): User[] {
+        return this.users;
     }
 
-    public add(): void {
-        console.log('Add user')
+    public add(newUser: User): void {
+        this.users.push(newUser);
     }
 
-    public remove(): void {
-        console.log('Remove user')
+    public remove(id: number): void {
+        let user = this.users.find(x => x.id === id);
+
+        if (user === undefined){
+            return;
+        }
+
+        const index: number = this.users.indexOf(user);
+        if (index !== -1) {
+            this.users.splice(index, 1);
+        }        
     }
 
     public setTraining(): void{
