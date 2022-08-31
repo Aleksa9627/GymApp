@@ -6,17 +6,12 @@
     font-stretch: expanded;
 }
 
-.flex-child:hover{
-    opacity: 1;
-}
-
 .flex-child {
     flex: 1;
     background-color: rgb(228, 195, 151);
     border: 2px solid rgb(34, 34, 30);
     padding: 15px;
     margin: 15px;
-    opacity: 0.7;
 }
 
 .flex-child:first-child {
