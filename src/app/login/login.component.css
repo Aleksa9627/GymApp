@@ -25,9 +25,22 @@ h1 {
 
 .register {
     text-align: center;
+    background-color: rgb(228, 195, 151);
+    opacity: 0.7;
 }
+
+.register:hover{
+    opacity: 1;
+}
+
 .login{
     text-align: center;
+    background-color: rgb(228, 195, 151);
+    opacity: 0.7;
+}
+
+.login:hover{
+    opacity: 1;
 }
 
 .button {

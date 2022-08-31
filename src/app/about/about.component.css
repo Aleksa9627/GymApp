@@ -4,4 +4,10 @@
     border: solid;
     border-radius: 30px;
     text-align: center;
+    background-color: rgb(228, 195, 151);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large;
+    font-weight: bold;
+    font-style: oblique;
+    font-stretch: expanded;
 }

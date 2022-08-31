@@ -1,0 +1,48 @@
+.flex-container {
+    display: flex;
+    text-align: center;
+    font-style: initial;
+    font-size: larger;
+    font-stretch: expanded;
+}
+
+.flex-child:hover{
+    opacity: 1;
+}
+
+.flex-child {
+    flex: 1;
+    background-color: rgb(228, 195, 151);
+    border: 2px solid rgb(34, 34, 30);
+    padding: 15px;
+    margin: 15px;
+    opacity: 0.7;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.c1{
+    border-radius: 15%;
+}
+.coach1 {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.coaching-button{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+#home{
+    position: fixed;
+    left: 50%;
+    text-align: center;
+    font-weight: bold;
+}
