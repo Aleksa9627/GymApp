@@ -38,6 +38,9 @@ import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatRadioModule} from '@angular/material/radio';
 import { MatSelectModule} from '@angular/material/select';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSortModule } from '@angular/material/sort';
 
 
 //Routing
@@ -97,7 +100,10 @@ const routes = [
     MatRadioModule,
     MatSelectModule,
     MatSliderModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

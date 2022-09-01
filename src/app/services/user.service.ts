@@ -1,7 +1,9 @@
 import { Injectable, OnInit } from "@angular/core";
 import { User } from "../models/user.model";
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+  })
 export class UserService implements OnInit {
 
     private users: User[] = [];
@@ -19,10 +21,25 @@ export class UserService implements OnInit {
         this.users.push(new User(4, 'Marilyn@gmail.com', 'Marilyn123', 'Marilyn', 'Delacruz', false));
         this.users.push(new User(5, 'Roy@gmail.com', 'Roy123', 'Roy', 'Peterson', false));
         this.users.push(new User(6, 'Bronson@gmail.com', 'Bronson123', 'Bronson', 'Shields', false));
+        this.users.push(new User(0, 'Alex@gmail.com', 'Alex123', 'Alex', 'Allison', false));
+        this.users.push(new User(1, 'Nathanial@gmail.com', 'Nathanial123', 'Nathanial', 'Cruz', false));
+        this.users.push(new User(2, 'Miah@gmail.com', 'Miah123', 'Miah', 'Werner', false));
+        this.users.push(new User(3, 'Cullen@gmail.com', 'Cullen123', 'Cullen', 'Roberts', false));
+        this.users.push(new User(4, 'Marilyn@gmail.com', 'Marilyn123', 'Marilyn', 'Delacruz', false));
+        this.users.push(new User(5, 'Roy@gmail.com', 'Roy123', 'Roy', 'Peterson', false));
+        this.users.push(new User(6, 'Bronson@gmail.com', 'Bronson123', 'Bronson', 'Shields', false));
+        this.users.push(new User(0, 'Alex@gmail.com', 'Alex123', 'Alex', 'Allison', false));
+        this.users.push(new User(1, 'Nathanial@gmail.com', 'Nathanial123', 'Nathanial', 'Cruz', false));
+        this.users.push(new User(2, 'Miah@gmail.com', 'Miah123', 'Miah', 'Werner', false));
+        this.users.push(new User(3, 'Cullen@gmail.com', 'Cullen123', 'Cullen', 'Roberts', false));
+        this.users.push(new User(4, 'Marilyn@gmail.com', 'Marilyn123', 'Marilyn', 'Delacruz', false));
+        this.users.push(new User(5, 'Roy@gmail.com', 'Roy123', 'Roy', 'Peterson', false));
+        this.users.push(new User(6, 'Bronson@gmail.com', 'Bronson123', 'Bronson', 'Shields', false));
+        console.log('loaded users');
     }
 
     public getByLoginInformation(email: string, password: string): User | null {
-        let user = this.users.find(x => x.email === email && x.password === password);
+        let user = this.users.find(x => x.email?.toUpperCase() === email.toUpperCase() && x.password === password);
         if (user === undefined){
             return null;
         }
