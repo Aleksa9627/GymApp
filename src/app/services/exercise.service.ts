@@ -1,7 +1,9 @@
 import { Injectable, OnInit } from "@angular/core";
 import { Exercise } from "../models/exercise.model";
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class ExerciseService implements OnInit {
 
     private exercises: Exercise[] = [];

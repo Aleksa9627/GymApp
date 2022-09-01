@@ -1,7 +1,10 @@
-import { OnInit } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
 import { User } from "../models/user.model";
 import { UserService } from "./user.service";
 
+@Injectable({
+    providedIn: 'root',
+})
 export class LoginService implements OnInit {
 
     public loggedIn = false;

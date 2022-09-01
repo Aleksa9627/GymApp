@@ -3,13 +3,13 @@ import { User } from "../models/user.model";
 
 @Injectable({
     providedIn: 'root',
-  })
+})
 export class UserService implements OnInit {
 
     private users: User[] = [];
 
     constructor() { }
-  
+
     ngOnInit(): void {
     }
 
@@ -40,7 +40,7 @@ export class UserService implements OnInit {
 
     public getByLoginInformation(email: string, password: string): User | null {
         let user = this.users.find(x => x.email?.toUpperCase() === email.toUpperCase() && x.password === password);
-        if (user === undefined){
+        if (user === undefined) {
             return null;
         }
         return user;
@@ -48,7 +48,7 @@ export class UserService implements OnInit {
 
     public getById(id: number): User | null {
         let user = this.users.find(x => x.id === id);
-        if (user === undefined){
+        if (user === undefined) {
             return null;
         }
         return user;
@@ -65,18 +65,18 @@ export class UserService implements OnInit {
     public remove(id: number): void {
         let user = this.users.find(x => x.id === id);
 
-        if (user === undefined){
+        if (user === undefined) {
             return;
         }
 
         const index: number = this.users.indexOf(user);
         if (index !== -1) {
             this.users.splice(index, 1);
-        }        
+        }
     }
 
-    public setTraining(): void{
+    public setTraining(): void {
         console.log('Set training for user')
     }
-  
-  }
+
+}

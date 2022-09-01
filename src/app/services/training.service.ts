@@ -1,7 +1,9 @@
 import { Injectable, OnInit } from "@angular/core";
 import { Training } from "../models/training.model";
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class TrainingService implements OnInit {
 
     private trainings: Training[] = [];
